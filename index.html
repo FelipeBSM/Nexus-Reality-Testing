@@ -103,7 +103,7 @@
  
     <!-- 3D AMBIENT -->
     <div id="embedded-scene">
-      <a-scene embedded id="m-s" user-control loading-screen="dotsColor: orange; backgroundColor: black; enabled: true;" vr-mode-ui="enabled: false;" renderer="alpha: true; logarithmicDepthBuffer: true;">
+      <a-scene embedded id="m-s" user-control loading-screen="dotsColor: orange; backgroundColor: black; enabled: true;" vr-mode-ui="enabled: false;" renderer="alpha: true; logarithmicDepthBuffer: true; colorManagement: true; physicallyCorrectLights: true;">
         <a-entity id="cam" id="rig" position="-4.8 1.5 2" rotation="0 -90 0">
           <a-entity id="cam-js" camera wasd-controls look-controls></a-entity>
         </a-entity>
