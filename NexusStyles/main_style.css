@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
+#tuto-plane-cointainer{
+    position: fixed;
+    background-color: rgba(100, 100, 100, .8);
+    height: 100%;
+    width:100%;
+    left:0;
+    top:0;
+    z-index: 10; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tuto-plane-insider{
+
+    width:70%;
+    height:60%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 8px rgb(46, 46, 46);
+    border-radius: 16px;
+    background-color: rgba(50, 50, 50, 1);
+}
+#tuto-plane-insider h2{
+
+   padding: 3rem;
+   text-transform: uppercase;
+   color: wheat;
+   font-size: 35px;
+}
+#tuto-plane-insider h3{
+
+    text-transform: uppercase;
+    color: rgb(180, 180, 180);
+    font-size: 30px;
+ }
+ #tuto-plane-insider #i1 p{
+    padding: 2rem;
+    text-transform:uppercase;
+    color: wheat;
+    font-size: 20px;
+ }
+ #tuto-plane-insider #i2 p{
+    padding: .8rem;
+    text-transform:uppercase;
+    color: wheat;
+    font-size: 20px;
+ }
+#button-containers{
+    display: inline-block;
+    padding: 10px;
+}
+.btn{
+     color:wheat;
+     text-transform: uppercase;
+     background-color: transparent;
+     font-weight: 400;
+     
+     border-radius: 20px;
+     padding-left:5%;
+     padding-right: 5%;
+     padding-top: 1%;
+     padding-bottom: 1%;
+ }
+ 
+.btn:hover{
+    cursor:pointer;
+    background-color: wheat;
+    font-weight: 500;
+    color:rgb(46, 46, 46);
+}
+#embedded-scene{
+    position: fixed;
+    height: 100%;
+    width:100%;
+    left:0;
+    top:0;
+    z-index: -10;
+    
+
+}
+#i2{
+    display: none;
+}
+.order-images{
+    display: inline-block;
+    justify-content: space-between;
+
+}
+.order-images img{
+    width: 20%;
+    height: 20%;
+}
+#mobile-input-container{
+    position: absolute;
+    
+    bottom: 50px;
+    right:20px;
+}
+#mobile-input-container img{
+    width:100px;
+    height:100px;
+}
+#mobile-input-camera-setting{
+    position: absolute;
+    z-index: 9;
+    top: 30px;
+    right:20px;
+}
+#setting-button-container{
+    padding-bottom: 2rem;
+}
+.mobile-btns{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+.material-icons.i-c{
+    color:white;
+    font-size: 48px;
+    
+    
+}
+.material-icons.i-c:active{
+    color: orangered;
+
+}
+#settings-container{
+    position: fixed;
+    background-color: rgba(100, 100, 100, .5);
+    height: 100%;
+    width:100%;
+    left:0;
+    top:0;
+    z-index: 8; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#settings-container-insider{
+    width:70%;
+    height:60%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 1);
+    border-radius: 16px;
+    border:solid rgba(50, 50, 50, .8);
+    background-color: rgba(50, 50, 50, 1);  
+    
+}
+#settings-container-insider h3{
+    color: white;
+    font-size: 30px;
+    padding:1rem;
+}
+#settings-container-insider span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:100%;
+    border-top:1px solid rgb(24, 24, 24)
+
+}
+#sec-1{
+   
+    display: block;
+    justify-content: space-between;
+    padding: 10px;
+}
+#sec-1 h4{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing:2px;
+}
+#input-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+input[type="checkbox"]{
+    width:60px;
+    height:30px;
+    appearance: none;
+    background-color: #DAE2DF;
+    border-radius: 15px;
+    box-shadow: inset 0 0 16px 1px rgba(0, 0, 0, .8);
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+}
+
+input[type="checkbox"]:checked{
+  background: linear-gradient(90deg,#F5A500, #F26305);
+}
+
+input[type="checkbox"]::before{
+content: "";
+width: 30px;
+height: 30px;
+background-color: #EDF3F1;
+border-radius: 15px;
+position: absolute;
+box-shadow:0px 4px 8px 1px rgba(0, 0, 0,.25) ;
+transform:scale(1.1);
+top:0;
+left: 0;
+
+transition: .3s;
+
+
+}
+input[type="checkbox"]::after{
+    content: "OFF";
+    position: absolute;
+    color: black;
+    font-size:12px;
+    left:2px;
+    top:6px;
+    transition:.3s;
+    
+}
+
+input:checked[type="checkbox"]::before{
+    left:30px;
+}
+input:checked[type="checkbox"]::after{
+    content: "ON";
+    color: black;
+    left: 37px;
+    font-weight:bolder;
+
+}
+#exp-p{
+    padding: 2rem;
+
+    color: wheat;
+    font-size: 20px;
+}
+#settings-bk-btn{
+    width:50%;
+    height: 50px;
+
+    text-align: center;
+    background-color: transparent;
+    border:  1px solid #F26305;
+    border-radius: 16px;
+    color: #F26305;
+    font-size: medium;
+    font-weight: bold;
+
+}
+#animation-button-container{
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    z-index:4;
+
+}
+#animationButton{
+    border: none;
+    border-radius: 16px;
+    background-color: #F26305;
+    color:white;
+    letter-spacing: 2px;
+    height: 50px;
+    width: 250px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, .8);
+    cursor: pointer;
+}
+
+
+
+
+
+a-scene {
+    height: 100%;
+    width: 100%;
+  } 
+  /*MEDIAS*/
+  
+  
+
+  @media (max-width: 420px) {
+    #tuto-plane-insider h2{
+
+        padding: 3rem;
+        text-transform: uppercase;
+        color: wheat;
+        font-size: 25px;
+        
+     }
+     #tuto-plane-insider h3{
+     
+         text-transform: uppercase;
+         color: rgb(100, 100, 100);
+         font-size: 20px;
+      }
+      #tuto-plane-insider #i1 p{
+         padding: 1rem;
+         text-transform:uppercase;
+         color: #f5deb3;
+         font-size: 10px;
+      }
+      #tuto-plane-insider #i2 p{
+        padding: 1rem;
+        text-transform:uppercase;
+        color: #f5deb3;
+        font-size: 10px;
+     }
+     #settings-container-insider h3{
+        color: white;
+        font-size: 20px;
+    }
+    #sec-1 h4{
+        color: white;
+        text-transform: uppercase;
+        letter-spacing:2px;
+        font-size: 20px;
+    }
+    #exp-p{
+        padding: 1rem;
+    
+        color: rgb(153, 153, 153);
+        font-size: 8px;
+    }
+  }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+   <meta charset="utf-8"/>
+   
+   
+   <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+   <link rel="stylesheet" href="NexusStyles/main_style.css" />
+
+  <head>
+    <title>Nexus Reality | Crédito Real</title>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled"/>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  </head>
+  <body>
+    
+    <div id="tuto-plane-cointainer">
+      <div id="tuto-plane-insider">
+        <div id="i1">
+          <h2>Bem vindo ao seu Nexus!</h2>
+          <h3>Veja seu futuro na sua frente<h3>
+          <p>Siga as próximas etapas ou pule as ilustrações para inciar sua expreiência.</p>
+        </div>
+
+        <div id="i2">
+          <div class="left-content">
+            <div class="removable">
+              <p>Use as teclas ilustradas abaixo para movimentar-se dentro do ambiente.</p>
+            </div>
+            
+            <div class="order-images removable">
+              <img src="Modelos/wasd_info.png"/>
+              <img src="Modelos/arrow_info.png"/>
+            </div>
+            
+          </div>
+          <div class="right-content">
+            <div class="removable">
+              <p>Use o mouse para rotacionar sua visão, conforme ilustrado abaixo.</p>
+            </div>
+            
+            <div class="order-images removable" >
+              <img src="Modelos/mouse_info.png"/>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="button-container">
+          <button id="btn-next"class="btn">próximo</button>
+          <button id="btn-jump"class="btn">pular</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mobile-input-container">
+      <div id="front-btn-container">
+        <button id="front-btn-btn" style="background-color:transparent; border:none; z-index:2"><img id="front-btn" unselectable="on" style="z-index:1;pointer-events: none; -moz-user-select: none;-webkit-user-select: none; user-select: none;" class="button-mobile" src="Modelos/mobileInput.png"/></button>
+      </div>
+    </div>
+
+    <div id="mobile-input-camera-setting">
+      <div id="setting-button-container">
+        <button id="setting-btn" class="mobile-btns"><span class="material-icons i-c">settings</span></button>
+      </div>
+      <div id="camera-button-container">
+        <button id="camera-btn" class="mobile-btns"><span class="material-icons i-c" >cameraswitch</span></button>
+      </div>
+    </div>
+
+    <div id="settings-container">
+      <div id="settings-container-insider">
+
+        <h3 id="title">CONFIGURAÇÕES</h3>
+        <div id="line-container">
+          <span></span>
+        </div>
+        
+
+        <div id="sec-1">
+   
+          <h4>Giroscópio</h4>
+          <div id="input-container">
+            <input id="toggle-gyro"type="checkbox"/>
+          </div>
+          <p id="exp-p"></p>
+          <button id="settings-bk-btn">VOLTAR</button>
+     
+          
+        </div>
+        <p></p>
+
+      </div>
+      
+    </div>
+
+    <div id="top-down-only">
+      <div id="animation-button-container">
+        <button id="animationButton">ATIVAR ROTAÇÃO 360°</button>
+      </div>
+    </div>
+ 
+    <!-- 3D AMBIENT -->
+    <div id="embedded-scene">
+      <a-scene embedded id="m-s" user-control loading-screen="dotsColor: orange; backgroundColor: black; enabled: true;" vr-mode-ui="enabled: false;" renderer="alpha: true; logarithmicDepthBuffer: true;">
+        <a-entity id="cam" id="rig" position="-4.8 1.5 2" rotation="0 -90 0">
+          <a-entity id="cam-js" camera wasd-controls look-controls></a-entity>
+        </a-entity>
+
+        <a-assets>
+          <a-asset-item id="modelo" src="Modelos/AP_MODELS_GLTF/HDR_NO_BFACE_AP_CR_3.glb"></a-asset-item>
+
+          <img id="sky" src="Modelos/sky360.jpg">
+
+        </a-assets>
+      
+        <a-entity id="3d-AP" gltf-model="#modelo" position="0 0 0" ></a-entity>
+        
+        <a-entity light="type: ambient; color: #BBB; intensity: 3.0"></a-entity>
+        <a-entity light="type: directional; color: #BBB; intensity: 1.0" position="-0.5 1 1"></a-entity>
+       
+        <a-sky src="#sky" rotation="0 170 0"></a-sky>
+       
+      </a-scene>  
+    </div>
+    
+    <script src="NexusStyles/NexusTestJS.js"></script>
+
+    
+  </body>
+</html>
